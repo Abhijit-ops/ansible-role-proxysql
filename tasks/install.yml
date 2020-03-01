@@ -6,7 +6,7 @@
   become: true  
 - name: Install ProxySQL deb file
   copy:
-    src: /etc/ansible/"https://github.com/sysown/proxysql/releases/download/v1.4.12/proxysql-1.4.12-1-centos7.x86_64.rpm"
+    src: /etc/ansible/https://github.com/sysown/proxysql/releases/download/v1.4.12/proxysql-1.4.12-1-centos7.x86_64.rpm
 #    "https://github.com/sysown/proxysql/releases/download/v{{ proxysql_version }}/proxysql_{{ proxysql_version }}-centos7.x86_64.rpm"
     dest: /etc/ansible/proxysql-1.4.12-1-centos7.x86_64.rpm
 - name: Install package.
