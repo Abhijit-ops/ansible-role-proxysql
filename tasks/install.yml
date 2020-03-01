@@ -7,7 +7,7 @@
 - name: Install ProxySQL deb file
   copy:
     src: "https://github.com/sysown/proxysql/releases/download/v{{ proxysql_version }}/proxysql_{{ proxysql_version }}-centos7.x86_64.rpm"
-    dest: /tmp/proxysql-2.0.10-1-centos7.x86_64.rpm
+    dest: /tmp/proxysql_{{ proxysql_version }}-centos7.x86_64.rpm
 - name: Install package.
   yum:
      name: /tmp/proxysql-2.0.10-1-centos7.x86_64.rpm
