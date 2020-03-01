@@ -3,6 +3,7 @@
   yum:
     name: git
     state: present
+  become: true  
 - name: Install ProxySQL deb file
   copy:
     #src: "https://github.com/sysown/proxysql/releases/download/v{{ proxysql_version }}/proxysql_{{ proxysql_version }}-centos7.x86_64.rpm"
