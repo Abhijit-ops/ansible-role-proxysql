@@ -12,7 +12,7 @@
     dest: /tmp/proxysql-2.0.10-1-centos7.x86_64.rpm
 - name: Install package.
   yum:
-     name: /tmp/package.rpm
+     name: /tmp/proxysql-2.0.10-1-centos7.x86_64.rpm
      state: present
   become: true
 - name: Download MySQL client
