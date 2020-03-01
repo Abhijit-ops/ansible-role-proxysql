@@ -3,8 +3,8 @@
   copy:
     dest: "/etc/proxysql-{{ item.item }}"
     content: "{{ item.content | b64decode }}"
-    owner: root
-    group: root
+    owner: ansible
+    group: ansible
     mode: "0600"
   no_log: true
   with_items: "{{ hostvars[proxysql_mysql_backend_servers[0]].pki_certs.results }}"
@@ -16,8 +16,8 @@
   template:
     src: proxysql.cnf.j2
     dest: /etc/proxysql.cnf
-    owner: root
-    group: root
+    owner: ansible
+    group: ansible
     mode: "0644"
     backup: true
   register: config_status
