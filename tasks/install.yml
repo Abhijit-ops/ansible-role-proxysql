@@ -1,4 +1,8 @@
 ---
+- name: install GIT
+  yum:
+    name: git
+    state: present
 - name: Install ProxySQL deb file
   copy:
     #src: "https://github.com/sysown/proxysql/releases/download/v{{ proxysql_version }}/proxysql_{{ proxysql_version }}-centos7.x86_64.rpm"
@@ -10,7 +14,7 @@
      state: present
   become: true
 - name: Download MySQL client
-  apt:
+  yum:
     name: "{{ item }}"
     state: present
     update_cache: true
